@@ -16,6 +16,17 @@ class BasicStack:
         
         self.size += 1
 
+    def pop(self) -> object:
+        if not self.size:
+            return None
+
+        aux = self.head
+        
+        self.head = self.head.next
+        self.size -= 1
+
+        return aux
+
     def peek(self) -> None:
         if not self.head:
             return
@@ -27,12 +38,12 @@ class BasicStack:
             aux = aux.next
 
 if __name__ == "__main__":
-    circular_list = BasicStack()
+    stack = BasicStack()
 
-    circular_list.push(1)
-    circular_list.push(2)
-    circular_list.push(3)
+    stack.push(1)
+    stack.push(2)
+    stack.push(3)
 
-    circular_list.peek()
-
+    stack.peek()
+    print(stack.pop())
         
