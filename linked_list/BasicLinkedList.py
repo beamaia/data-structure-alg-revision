@@ -47,7 +47,7 @@ class BasicLinkedList:
         node.next = aux.next
         aux.next = node
     
-    def insertIndex(self, value_add, index:int) -> None:
+    def insert_index(self, value_add, index:int) -> None:
         """
         Inserts node into a certain index of the list
         """
@@ -98,7 +98,7 @@ class BasicLinkedList:
 
             prev.next = aux.next
 
-    def deleteIndex(self, index:int) -> None:
+    def delete_index(self, index:int) -> None:
         # If linked list is empty
         if not self.head:
             return 
@@ -141,7 +141,7 @@ if __name__ == "__main__":
     linked_list.append(2)
     linked_list.append(30)
     linked_list.insert(23, 2)
-    linked_list.insertIndex(32, 1)
-    linked_list.deleteIndex(2)
+    linked_list.insert_index(32, 1)
+    linked_list.delete_index(2)
 
     linked_list.show_list()
