@@ -1,7 +1,7 @@
 # :books: Data Structures and Algorithm Revision 
 
 Data structures to study:
-- [ ] Linked List
+- [x] Linked List
 - [ ] Array
 - [ ] Stack
 - [ ] Queue
