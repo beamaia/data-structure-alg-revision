@@ -2,8 +2,8 @@
 
 Data structures to study:
 - [x] Linked List
-- [ ] Array
-- [ ] Stack
+- [x] Array
+- [x] Stack
 - [ ] Queue
 - [ ] Binary Tree
 - [ ] Heap
