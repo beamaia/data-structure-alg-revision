@@ -1,6 +1,6 @@
 from Node import Node
 
-class BasicStack:
+class BasicListStack:
     def __init__(self) -> None:
         self.head = None
         self.size = 0
@@ -38,12 +38,12 @@ class BasicStack:
             aux = aux.next
 
 if __name__ == "__main__":
-    stack = BasicStack()
+    stack = BasicListStack()
 
     stack.push(1)
     stack.push(2)
     stack.push(3)
 
     stack.peek()
-    print(stack.pop())
+    print('Last item:', stack.pop())
         
