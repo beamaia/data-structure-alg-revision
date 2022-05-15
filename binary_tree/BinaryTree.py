@@ -107,18 +107,17 @@ class Node:
     def height(self) -> int:
         if not self.data:
             return 0
-        elif not self.right or not self.left:
+        elif not self.right and not self.left:
             return 1
         
+        left_height, right_height = 0, 0
+
         if self.left:
             left_height = self.left.height() + 1
-        else:
-            left_height = 0
-        
+
         if self.right:
             right_height = self.right.height() + 1
-        else:
-            right_height = 0
+
 
         if left_height > right_height:
             return left_height
@@ -141,6 +140,7 @@ if __name__ == '__main__':
     root.left.right = Node(5)
     root.right.left = Node(6)
     root.right.right = Node(7)
+    root.right.right.right = Node(8)
 
     print('Printing tree inorder...')
     root.print_inorder()
