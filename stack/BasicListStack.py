@@ -27,7 +27,7 @@ class BasicListStack:
 
         return aux
 
-    def peek(self) -> None:
+    def show_all(self) -> None:
         if not self.head:
             return
 
@@ -37,6 +37,9 @@ class BasicListStack:
 
             aux = aux.next
 
+    def peek(self) -> None:
+        print(self.head.val)
+
 if __name__ == "__main__":
     stack = BasicListStack()
 
@@ -44,6 +47,9 @@ if __name__ == "__main__":
     stack.push(2)
     stack.push(3)
 
+    stack.show_all()
+    print('Last item peeked:', end=' ')
     stack.peek()
-    print('Last item:', stack.pop())
+
+    print('Last item popped:', stack.pop())
         
